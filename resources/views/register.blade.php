@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Login Page</title>
+    <title>Register Page</title>
     <style>
         body {
             background-color: #f2f2f2;
@@ -55,12 +55,12 @@
             background-color: #45a049;
         }
 
-        .register-link {
+        .login-link {
             text-align: center;
             margin-top: 10px;
         }
 
-        .register-link a {
+        .login-link a {
             color: #007bff;
             text-decoration: none;
         }
@@ -69,23 +69,31 @@
 <body>
     <div class="container">
         <form>
-            <h2>Login</h2>
+            <h2>Register</h2>
             <div class="form-group">
-                <label for="username">Username</label>
-                <input type="text" id="username" name="username" placeholder="Enter your username">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" placeholder="Enter your name">
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="text" id="email" name="email" placeholder="Enter your email">
             </div>
             <div class="form-group">
                 <label for="password">Password</label>
                 <input type="password" id="password" name="password" placeholder="Enter your password">
             </div>
             <div class="form-group">
-                <button type="submit" class="btn">Login</button>
+                <label for="password_confirmation">Confirm Password</label>
+                <input type="password" id="password_confirmation" name="password_confirmation" placeholder="Confirm your password">
+            </div>
+            <div class="form-group">
+                <button type="submit" class="btn">Register</button>
             </div>
         </form>
-        <div class="register-link">
-            Don't have an account? <a href="{{ route('register') }}">Register here</a>
+        <div class="login-link">
+            Already have an account? <a href="{{ route('login') }}">Login here</a>
         </div>
     </div>
 </body>
 </html>
-
+        
