@@ -67,9 +67,20 @@
     </style>
 </head>
 <body>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login Page</title>
+    <style>
+        /* CSS styling */
+    </style>
+</head>
+<body>
     <div class="container">
-        <form>
+        <form method="POST" action="{{ route('login.process') }}">
+            @csrf
             <h2>Login</h2>
+            <!-- Form input fields -->
             <div class="form-group">
                 <label for="username">Username</label>
                 <input type="text" id="username" name="username" placeholder="Enter your username">
